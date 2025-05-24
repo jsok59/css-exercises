@@ -11,6 +11,5 @@ menuTitle.addEventListener("click", (e) => {
 window.addEventListener("click", (e) => {
 	if (!dropdownContainer.contains(e.target)) {
 		dropdownMenu.classList.remove("visible");
-		dropdownMenu.classList.add("unvisible");
 	}
 });

@@ -16,13 +16,14 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	background-color: rgb(99, 97, 97);
 	display: none;
+	background-color: rgb(99, 97, 97);
 }
 
 @keyframes close {
 	from {
 		transform: scaleY(1);
+		color: #000;
 	}
 
 	to {
@@ -35,7 +36,7 @@ ul.dropdown-menu li:hover {
 }
 
 .visible {
-	animation: open 1s;
+	animation: open 1s ease-in-out;
 	display: block;
 	transform-origin: 50% 0%;
 }
@@ -45,13 +46,16 @@ ul.dropdown-menu li:hover {
 		transform: scaleY(0);
 	}
 
+	70% {
+		transform: scaleY(1.1);
+	}
+
 	to {
 		transform: scaleY(1);
 	}
 }
 
 .unvisible {
-	animation: close 1s;
-	display: none;
+	animation: close 1s ease;
 	transform-origin: 50% 0%;
 }
